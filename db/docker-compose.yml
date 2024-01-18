@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  postgres:
+    image: "postgres:14.0"
+    ports:
+      - "5432:5432"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      POSTGRES_USER: catalog_db
+      POSTGRES_PASSWORD: catalog_db_password
+      POSTGRES_DB: catalog_service
+    volumes:
+      - ./db-data/postgres/:/var/lib/postgresql/data
