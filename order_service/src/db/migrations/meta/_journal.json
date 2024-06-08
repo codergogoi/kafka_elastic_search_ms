@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1711978881311,
+      "tag": "0000_lucky_warlock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1717329637796,
+      "tag": "0001_little_ben_urich",
+      "breakpoints": true
+    }
+  ]
+}
