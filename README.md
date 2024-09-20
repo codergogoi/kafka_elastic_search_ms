@@ -14,9 +14,9 @@ This repository is part of the Node.js Microservice with Kafka and Elastic Searc
     - Microservice hands on
     - ORM why we used and when to use it?
     - Prisma hands on
+    - Kafka Hands on
     - Elastic Search why needed?
     - Elastic Search Hands on
-    - Kafka Hands on
     - Infrastructure as Code why necessary?
     - IAC hands on
     - Deployment
