@@ -8,6 +8,9 @@
     },
     {
       "path": "db"
+    },
+    {
+      "path": "broker"
     }
   ]
 }
