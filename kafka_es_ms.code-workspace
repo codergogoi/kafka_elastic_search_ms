@@ -11,6 +11,9 @@
     },
     {
       "path": "broker"
+    },
+    {
+      "path": "user_service"
     }
   ]
 }

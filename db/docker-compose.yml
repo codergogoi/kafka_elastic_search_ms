@@ -27,3 +27,16 @@ services:
       POSTGRES_DB: order_service
     volumes:
       - ./db-data/order_db_server/:/var/lib/postgresql/data
+  user_db_server:
+    image: "postgres:14.0"
+    ports:
+      - "5442:5432"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      POSTGRES_USER: user_db
+      POSTGRES_PASSWORD: user_db_password
+      POSTGRES_DB: user_service
+    volumes:
+      - ./db-data/user_db_server/:/var/lib/postgresql/data
