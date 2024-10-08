@@ -1,0 +1,22 @@
+{
+  "name": "user_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "3.1.7"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "16.4.5",
+    "express": "4.21.0",
+    "jsonwebtoken": "9.0.2",
+    "pg": "8.13.0"
+  }
+}
