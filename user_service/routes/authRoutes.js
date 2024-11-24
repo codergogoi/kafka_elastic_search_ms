@@ -97,18 +97,16 @@ const requestAuthorizer = (req, res, next) => {
   });
 };
 
- 
 // Example of a protected route
  router.get("/profile", requestAuthorizer, async (req, res) => {
 
   // if user is authorized, their details will be available in req
   const authorisedUser = req.user;
 
-    
    return res.json({ 
       message: "User profile fetched successfully",
       user: req.user,
     });
  });
- 
+
  */
