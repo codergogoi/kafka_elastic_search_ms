@@ -6,6 +6,7 @@ export const RequestAuthorizer = async (
   res: Response,
   next: NextFunction
 ) => {
+  console.log("RequestAuthorizer called", req.headers.authorization);
   try {
     if (!req.headers.authorization) {
       return res
@@ -16,6 +17,7 @@ export const RequestAuthorizer = async (
     req.user = userData;
     next();
   } catch (error) {
+    console.log("error", error);
     return res.status(403).json({ error });
   }
 };
