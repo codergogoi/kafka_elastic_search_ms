@@ -1,7 +1,8 @@
 import { OrderLineItemType, OrderWithLineItems } from "../dto/orderRequest.dto";
 import { CartRepositoryType } from "../repository/cart.repository";
 import { OrderRepositoryType } from "../repository/order.repository";
-import { OrderStatus } from "../types";
+import { MessageType, OrderStatus } from "../types";
+
 
 export const CreateOrder = async (
   userId: number,
@@ -89,7 +90,9 @@ export const DeleteOrder = async (
   return true;
 };
 
-export const HandleSubscription = async (message: any) => {
+export const HandleSubscription = async (message: MessageType) => {
+  console.log("Message received by order Kafka consumer", message);
+
   // if (message.event === OrderEvent.ORDER_UPDATED) {
   // call create order
 };
