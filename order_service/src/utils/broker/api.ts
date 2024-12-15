@@ -1,5 +1,5 @@
 import axios from "axios";
-import { APIError, AuthorizeError, NotFoundError } from "../error";
+import { AuthorizeError, NotFoundError } from "../error";
 import { logger } from "../logger";
 import { Product } from "../../dto/product.dto";
 import { User } from "../../dto/User.Model";
@@ -36,12 +36,14 @@ export const GetStockDetails = async (ids: number[]) => {
 
 export const ValidateUser = async (token: string) => {
   try {
-    // axios.defaults.headers.common["Authorization"] = token;
-    const response = await axios.get(`${AUTH_SERVICE_BASE_URL}/validate`, {
+    console.log("ValidateUser called", token);
+    const response = await axios.get(`${AUTH_SERVICE_BASE_URL}/auth/validate`, {
       headers: {
         Authorization: token,
       },
     });
+
+    console.log("response", response.data);
 
     if (response.status !== 200) {
       throw new AuthorizeError("user not authorised");

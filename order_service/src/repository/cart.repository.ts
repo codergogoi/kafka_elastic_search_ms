@@ -1,6 +1,6 @@
 import { DB } from "../db/db.connection";
 import { Cart, CartLineItem, cartLineItems, carts } from "../db/schema";
-import { CartWithLineItems } from "../dto/cartRequest.do";
+import { CartWithLineItems } from "../dto/cartRequest.dto";
 import { NotFoundError } from "../utils";
 import { eq } from "drizzle-orm";
 

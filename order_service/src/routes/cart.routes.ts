@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import * as service from "../service/cart.service";
 import * as repository from "../repository/cart.repository";
 import { ValidateRequest } from "../utils/validator";
-import { CartRequestInput, CartRequestSchema } from "../dto/cartRequest.do";
+import { CartRequestInput, CartRequestSchema } from "../dto/cartRequest.dto";
 import { RequestAuthorizer } from "./middleware";
 
 const router = express.Router();

@@ -1,5 +1,5 @@
 import { CartLineItem } from "../db/schema";
-import { CartEditRequestInput, CartRequestInput } from "../dto/cartRequest.do";
+import { CartEditRequestInput, CartRequestInput } from "../dto/cartRequest.dto";
 import { CartRepositoryType } from "../repository/cart.repository";
 import { AuthorizeError, logger, NotFoundError } from "../utils";
 import { GetProductDetails, GetStockDetails } from "../utils/broker";
